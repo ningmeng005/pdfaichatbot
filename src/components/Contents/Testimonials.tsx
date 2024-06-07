@@ -81,7 +81,7 @@ export default function Testimonials() {
                         />
                     </p>
                     <h2 className="text-[40px] capitalize leading-[65px] text-[#212B36] font-[600] pb-[20px]">Customers Love XXX!</h2>
-                    <p className="text-[16px] leading-[27px] text-[#565656]">[描述]</p>
+                    <p className="text-[16px] leading-[27px] text-[#565656]">[ 描述 ]</p>
                 </div>
 
                 <div className="mt-[40px] px-[45px] grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-3">

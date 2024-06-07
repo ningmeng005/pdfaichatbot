@@ -86,7 +86,7 @@ const FrequentlyAskedQuestions = () => {
     return (
         <>
             {/* Frequently Asked Questions */}
-            <div className="bg-[#f2f7ff] pt-[60px] pb-[60px] relative">
+            <div className="pt-[60px] pb-[60px] relative">
                 <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
                     <div className="max-w-[968px] mx-auto text-center">
                         <p className="flex items-center justify-center text-[#3482f0] text-[15px] font-[600]">
@@ -105,7 +105,7 @@ const FrequentlyAskedQuestions = () => {
                             />
                         </p>
                         <h2 className="text-[40px] capitalize leading-[65px] text-[#212B36] font-[600] pb-[20px]">Frequently Asked Questions</h2>
-                        <p className="text-[16px] leading-[27px] text-[#565656]">[描述]</p>
+                        <p className="text-[16px] leading-[27px] text-[#565656]">[ 描述 ]</p>
                     </div>
 
                     <div className="mt-[40px]">
