@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+}
+
+* {
+    font-family:
+            system-ui,
+            -apple-system, /* Firefox supports this but not yet `system-ui` */
+            'Segoe UI',
+            Roboto,
+            Helvetica,
+            Arial,
+            sans-serif,
+            'Apple Color Emoji',
+            'Segoe UI Emoji';
+}
+
+/** {*/
+/*    font-family: "Poppins", sans-serif;*/
+/*}*/
+
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+span {
+    font-family: 'Anek Bangla', sans-serif;
+}
+
+a {
+    font-family: "Inter", sans-serif;
+}
+
+.shadows {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.bg_linear {
+    background: linear-gradient(
+            95deg,
+            #101023 5.97%,
+            rgba(15, 15, 33, 0.97) 52.2%,
+            #0e0e20 91.78%
+    );
+}
+.bg_linear_gpt {
+    background: linear-gradient(
+            85deg,
+            rgba(252, 252, 252, 0.44) 1.85%,
+            rgba(242, 243, 248, 0.53) 89.3%
+    );
+}
+.drop_shadow {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.2));
+}
+
+.text_bg {
+    background: linear-gradient(
+            90deg,
+            #101023 10.71%,
+            rgba(15, 15, 30, 0.64) 50.71%,
+            rgba(13, 13, 25, 0.84) 88.54%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.custom_bg {
+    background: linear-gradient(
+            0deg,
+            #fcfcfc 0.27%,
+            rgba(242, 243, 248, 0.3) 99.75%
+    ),
+    url('/custom-chat-bg.png'), lightgray 0% 0% / 100px 100px repeat;
+}
+
+/* //scroll bar */
+/* width */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border: 1px solid #d9d9d9;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #d9d9d9;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #d9d9d9;
+}
+
+
+/* header */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: box-shadow 0.3s;
+}
+
+.navbar-shadow {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* CustomersReview */
+.carousel {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+}
+
+.carousel-controls {
+    transition: opacity 0.3s ease;
+}
+
+button {
+    color: #000;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+button:focus {
+    outline: none;
+}
+
+button.w-4.h-4 {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+}
+
+.relative:hover .carousel-controls {
+    display: flex;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+/*FAQ*/
+.grid {
+    grid-column-gap: 24px;
+    grid-row-gap: 40px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    display: grid;
+}
+.grid.faq-wrap {
+    grid-row-gap: 24px;
+    grid-template-columns: 1fr;
+}
+.faq-item {
+    background-color: #ffffff;
+    text-align: left;
+    border: 1px solid #dee2e7;
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+    padding: 30px 35px;
+    box-shadow: 0 6px 10px rgba(19, 17, 33, .02);
+}
+
+.faq-question {
+    color: var(--black-primary);
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.faq-icon {
+    border: 2px solid #ecebf0;
+    border-radius: 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    display: flex;
+}
+
+.icon-16px {
+    border-radius: 0;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    min-width: 16px;
+    height: 16px;
+    margin-bottom: 0;
+    display: flex;
+}
+
+.faq-icon-bar {
+    background-color: #3482f0;
+    border-radius: 100px;
+    width: 12px;
+    height: 2px;
+    position: absolute;
+}
+
+.faq-icon-bar.ver {
+    transform: rotate(90deg);
+}
+
+.faq-answer {
+    width: 1160px;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+.faq-answer-text {
+    color: #212121;
+    margin-top: 12px;
+}
+
+/*:root {*/
+/*  --foreground-rgb: 0, 0, 0;*/
+/*  --background-start-rgb: 214, 219, 220;*/
+/*  --background-end-rgb: 255, 255, 255;*/
+/*}*/
+
+/*@media (prefers-color-scheme: dark) {*/
+/*  :root {*/
+/*    --foreground-rgb: 255, 255, 255;*/
+/*    --background-start-rgb: 0, 0, 0;*/
+/*    --background-end-rgb: 0, 0, 0;*/
+/*  }*/
+/*}*/
+
+/*body {*/
+/*  color: rgb(var(--foreground-rgb));*/
+/*  background: linear-gradient(*/
+/*      to bottom,*/
+/*      transparent,*/
+/*      rgb(var(--background-end-rgb))*/
+/*    )*/
+/*    rgb(var(--background-start-rgb));*/
+/*}*/
+
+/*@layer utilities {*/
+/*  .text-balance {*/
+/*    text-wrap: balance;*/
+/*  }*/
+/*}*/
