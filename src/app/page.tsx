@@ -5,6 +5,7 @@ import Link from "next/link";
 // components
 import IndexNavbar from "@/components/Navbars/IndexNavbar";
 import Footer from "@/components/Footers/Footer";
+import Testimonials from "@/components/Contents/Testimonials";
 import FrequentlyAskedQuestions from "@/components/Contents/FrequentlyAskedQuestions";
 import ChatbotListening from "@/components/Contents/ChatbotListening";
 
@@ -26,15 +27,20 @@ export default function Page() {
                 </div>
             </section>
 
+            {/*Testimonials*/}
+            <section>
+                <Testimonials />
+            </section>
+
             {/*FAQ*/}
             <section>
                 <FrequentlyAskedQuestions />
             </section>
 
             {/*XXX Chatbot is Listening - Talk to Your PDF AI Assistant*/}
-            <section>
-                <ChatbotListening />
-            </section>
+            {/*<section>*/}
+            {/*    <ChatbotListening />*/}
+            {/*</section>*/}
 
             <Footer />
         </>
