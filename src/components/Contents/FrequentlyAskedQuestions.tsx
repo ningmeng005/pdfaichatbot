@@ -86,7 +86,7 @@ const FrequentlyAskedQuestions = () => {
     return (
         <>
             {/* Frequently Asked Questions */}
-            <div className="pt-[60px] pb-[60px] relative">
+            <div className="bg-[#f2f7ff] pt-[80px] pb-[80px] relative">
                 <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
                     <div className="max-w-[968px] mx-auto text-center">
                         <p className="flex items-center justify-center text-[#3482f0] text-[15px] font-[600]">

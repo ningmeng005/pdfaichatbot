@@ -1,6 +1,9 @@
 "use client"; // 添加这行
 
 import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 
 const testimonials = [
@@ -61,8 +64,17 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        arrows: true,
+    };
+
     return (
-        <div className="bg-[#ffffff] pt-[60px] pb-[60px] relative">
+        <div className="bg-[#f8fbff] pt-[80px] pb-[80px] relative">
             <div className="container max-w-screen-xl mx-auto">
                 <div className="max-w-[968px] mx-auto text-center">
                     <p className="flex items-center justify-center text-[#3482f0] text-[15px] font-[600] uppercase">
@@ -72,7 +84,7 @@ export default function Testimonials() {
                             height={20}
                             className='inline-block w-[20px] h-[20px] mr-[10px]'
                         />
-                        Testimonials
+                        PDF AI Chatbot -- Testimonials
                         <Image
                             src={"/images/icon-diamond.png"}
                             width={20}
@@ -80,37 +92,67 @@ export default function Testimonials() {
                             className='inline-block w-[20px] h-[20px] ml-[10px]'
                         />
                     </p>
-                    <h2 className="text-[40px] capitalize leading-[65px] text-[#212B36] font-[600] pb-[20px]">Customers Love XXX!</h2>
-                    <p className="text-[16px] leading-[27px] text-[#565656]">[ 描述 ]</p>
+                    <h2 className="text-[40px] capitalize leading-[65px] text-[#212B36] font-[600] mt-[-5px] pb-[5px]">Customers Love XXX!</h2>
+                    <p className="max-w-[700px] mx-auto text-[16px] leading-[24px] text-[#565656]">We understand how challenging it can be to work with PDFs, which is why we've created AI PDF chat features that users love!</p>
                 </div>
 
-                <div className="mt-[40px] px-[45px] grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-3">
-                    {testimonials.map((testimonial, index) => (
-                        <div key={index} className="bg-white rounded-[30px] border border-gray-200 shadow-custom p-[32px] flex flex-col gap-y-5">
-                            <div className="flex gap-4 justify-start items-center">
-                                <div className="w-[40px] h-[40px] flex-shrink-0 overflow-hidden rounded-[360px] border-2 border-solid border-[#1e58eb]">
-                                    <Image src={testimonial.img} alt={testimonial.imgalt} width={40} height={40} className="object-cover" />
+                <div>
+                    <Slider {...settings} className="mt-[40px] px-[45px] grid grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-3">
+                        {testimonials.map((testimonial, index) => (
+                            <div key={index} className="bg-white rounded-[30px] border border-gray-200 shadow-custom p-[32px] flex flex-col gap-y-5">
+                                <div className="flex gap-4 justify-start items-center">
+                                    <div className="w-[40px] h-[40px] flex-shrink-0 overflow-hidden rounded-[360px] border-2 border-solid border-[#1e58eb]">
+                                        <Image src={testimonial.img} alt={testimonial.imgalt} width={40} height={40} className="object-cover" />
+                                    </div>
+                                    <div className="flex flex-col">
+                                        <div className="text-[16px] font-[600] pb-[2px]">{testimonial.name}</div>
+                                        <div className="text-[12px] text-[#7c7c7c] leading-[14px]">{testimonial.role}, {testimonial.unit}</div>
+                                    </div>
                                 </div>
-                                <div className="flex flex-col">
-                                    <div className="text-[16px] font-[600] pb-[2px]">{testimonial.name}</div>
-                                    <div className="text-[12px] text-[#7c7c7c] leading-[14px]">{testimonial.role}, {testimonial.unit}</div>
+                                <div className="quote">
+                                    <div className="quote-mark">" </div>
+                                    <div>{testimonial.content}</div>
+                                    <div className="quote-mark"> "</div>
                                 </div>
-                            </div>
-                            <div className="quote">
-                                <div className="quote-mark">" </div>
-                                <div>{testimonial.content}</div>
-                                <div className="quote-mark"> "</div>
-                            </div>
-                            <div>
-                                {testimonial.tags.map((tag, tagIndex) => (
-                                    <span key={tagIndex} className="text-[#1e58eb] pr-[5px]">
+                                <div>
+                                    {testimonial.tags.map((tag, tagIndex) => (
+                                        <span key={tagIndex} className="text-[#1e58eb] pr-[5px]">
                                         {tag}{tagIndex !== testimonial.tags.length - 1 ? ' ' : ''}
                                     </span>
-                                ))}
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </Slider>
                 </div>
+
+                {/*<div className="mt-[40px] px-[45px] grid grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-3">*/}
+                {/*    {testimonials.map((testimonial, index) => (*/}
+                {/*        <div key={index} className="bg-white rounded-[30px] border border-gray-200 shadow-custom p-[32px] flex flex-col gap-y-5">*/}
+                {/*            <div className="flex gap-4 justify-start items-center">*/}
+                {/*                <div className="w-[40px] h-[40px] flex-shrink-0 overflow-hidden rounded-[360px] border-2 border-solid border-[#1e58eb]">*/}
+                {/*                    <Image src={testimonial.img} alt={testimonial.imgalt} width={40} height={40} className="object-cover" />*/}
+                {/*                </div>*/}
+                {/*                <div className="flex flex-col">*/}
+                {/*                    <div className="text-[16px] font-[600] pb-[2px]">{testimonial.name}</div>*/}
+                {/*                    <div className="text-[12px] text-[#7c7c7c] leading-[14px]">{testimonial.role}, {testimonial.unit}</div>*/}
+                {/*                </div>*/}
+                {/*            </div>*/}
+                {/*            <div className="quote">*/}
+                {/*                <div className="quote-mark">" </div>*/}
+                {/*                <div>{testimonial.content}</div>*/}
+                {/*                <div className="quote-mark"> "</div>*/}
+                {/*            </div>*/}
+                {/*            <div>*/}
+                {/*                {testimonial.tags.map((tag, tagIndex) => (*/}
+                {/*                    <span key={tagIndex} className="text-[#1e58eb] pr-[5px]">*/}
+                {/*                        {tag}{tagIndex !== testimonial.tags.length - 1 ? ' ' : ''}*/}
+                {/*                    </span>*/}
+                {/*                ))}*/}
+                {/*            </div>*/}
+                {/*        </div>*/}
+                {/*    ))}*/}
+                {/*</div>*/}
             </div>
         </div>
     );

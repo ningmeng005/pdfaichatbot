@@ -174,8 +174,18 @@ img {
 
 
 
+/**/
 
+.testimonial-slider-container .testimonial {
+    text-align: center;
+    padding: 20px;
+    color: #333;
+}
 
+.testimonial img {
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
 
 
 
@@ -288,3 +298,29 @@ img {
 /*    text-wrap: balance;*/
 /*  }*/
 /*}*/
+
+
+/*BannerSection*/
+.BannerSection {
+    background: url("/images/BannerSection.png");
+}
+
+/* iframedescription */
+.gradient-border {
+    background-color: #ffffff;
+    position: relative;
+    background-clip: padding-box;
+    border: solid 2px transparent;
+}
+
+.gradient-border::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    z-index: -1;
+    background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+    border-radius: inherit;
+}
