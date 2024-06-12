@@ -9,6 +9,7 @@ import Footer from "@/components/Footers/Footer";
 import Testimonials from "@/components/Contents/Testimonials";
 import FrequentlyAskedQuestions from "@/components/Contents/FrequentlyAskedQuestions";
 import ChatbotListening from "@/components/Contents/ChatbotListening";
+import UseCase from "@/components/Contents/UseCase";
 
 
 const iframedescriptiondata = [
@@ -32,40 +33,7 @@ const iframedescriptiondata = [
     },
 ];
 
-const UseCasetags = [
-    {
-        alt: 'AI-Powered PDF Interaction for Any Use Case - Book.pdf',
-        text: "Book.pdf",
-    },
-    {
-        alt: 'AI-Powered PDF Interaction for Any Use Case - Book.pdf',
-        text: "Financial Report.pdf",
-    },
-    {
-        alt: 'AI-Powered PDF Interaction for Any Use Case - Book.pdf',
-        text: "Contact.pdf",
-    },
-    {
-        alt: 'AI-Powered PDF Interaction for Any Use Case - Book.pdf',
-        text: "User Manual.pdf",
-    },
-    {
-        alt: 'AI-Powered PDF Interaction for Any Use Case - Book.pdf',
-        text: "Invoice.pdf",
-    },
-    {
-        alt: 'AI-Powered PDF Interaction for Any Use Case - Book.pdf',
-        text: "Scientific Paper.pdf",
-    },
-    {
-        alt: 'AI-Powered PDF Interaction for Any Use Case - Book.pdf',
-        text: "Marketing Brochure.pdf",
-    },
-    {
-        alt: 'AI-Powered PDF Interaction for Any Use Case - Book.pdf',
-        text: "Newsletter.pdf",
-    },
-]
+
 
 const tags = [
     'Social Media Posts', 'Product Description', 'Blogs', 'Emails', 'Newsletters',
@@ -193,8 +161,8 @@ export default function Page() {
             {/* AI-Powered PDF Interaction for Any Use Cases */}
             <section>
                 <div className="pt-[30px] pb-[30px]">
-                    <div className="container max-w-screen-xl mx-auto">
-                        <div className="max-w-[968px] mx-auto text-center">
+                    <div className="mx-auto">
+                        <div className="container max-w-screen-xl mx-auto text-center">
                             <p className="flex items-center justify-center text-[#3482f0] text-[15px] font-[600] uppercase">
                                 <Image
                                     src={"/images/icon-diamond.png"}
@@ -217,20 +185,49 @@ export default function Page() {
                                 all that information is why XXX was created -
                                 it works no matter what kind of PDF content you want to explore. </p>
                         </div>
-                        <div className="mt-10 max-w-4xl mx-auto w-full flex flex-wrap justify-center gap-4">
-                            {UseCasetags.map((item, index) => (
-                                <span key={index} className="bg-white text-gray-700 py-2 px-4 rounded-full shadow-md">
-                                    <Image
-                                        src={"/images/icon-diamond.png"}
-                                        alt={item.alt}
-                                        width={20}
-                                        height={20}
-                                        className='inline-block w-[20px] h-[20px]'
-                                    />{item.text}
-                                </span>
-                            ))}
+                        <div className="relative mt-10 mx-auto w-full flex flex-wrap justify-center gap-4" style={{ position: 'relative' }}>
+                            <div className="w-full h-auto absolute top-0 left-0 z-10" style={{ display: 'flex', width: '100%', height: '161px', pointerEvents: 'none' }}>
+                                <div style={{ width: '25%', background: 'linear-gradient(to right, white 40%, transparent 100%)' }}></div>
+                                <div style={{ width: '25%', marginLeft: 'auto', background: 'linear-gradient(to left, white 40%, transparent 100%)' }}></div>
+                            </div>
+                            <UseCase />
+                        </div>
+
+                        <div className="container max-w-screen-xl mx-auto mt-[60px]">
+                            <div className="flex flex-col lg:flex-row p-8 items-center">
+                                {/* 左侧部分 */}
+                                <div className="lg:w-1/2 pr-8">
+                                    <span className="inline-block bg-blue-500 text-white rounded-full px-4 py-2 mb-4">Professionals</span>
+                                    <h3 className="text-[30px] font-[600] mb-4">Professionals – Unlock Efficiency with Our PDFGPT</h3>
+                                    <p className="text-[18px] leading-[26px] font-[500] text-[#565656] mr-[30px]">
+                                        Chat with your PDFs, and get quick summaries and insights,
+                                        no matter how complex or endless the documents.
+                                    </p>
+                                </div>
+                                {/* 右侧部分 */}
+                                <div className="lg:w-1/2">
+                                    <div className="flex">
+                                        <div className="">
+                                            <span>Summarize the main findings of the report.</span>
+                                        </div>
+                                        <div className="">
+                                            <span>Compare the financial statements of two quarters in the document.</span>
+                                        </div>
+                                        <div className="">
+                                            <span>Identify the financial highlights from the annual report.</span>
+                                        </div>
+                                        <div className="">
+                                            <span>Identify the financial highlights from the annual report.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+
+
+
                 </div>
 
             </section>
